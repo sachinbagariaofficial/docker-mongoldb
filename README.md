@@ -1,4 +1,4 @@
-Here’s your complete `README.md` file in one go, ready to upload to GitHub:
+`README.md` 
 
 ---
 

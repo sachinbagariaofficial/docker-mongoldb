@@ -1,0 +1,22 @@
+# This file we have run in our terminal and then paste this command to run conatienr and images 
+# docker compose -f mogodb.yaml up -d
+
+services:
+  mongo:
+    image: mongo
+    ports: 
+    - 27017:27017
+    environment: 
+      MONGO_INITDB_ROOT_USERNAME: admin 
+      MONGO_INITDB_ROOT_PASSWORD: sachin
+    volumes:
+    - /Users/sachin/Desktop/Pratice/data/:/data/db
+
+  mongo-express:
+    image: mongo-express
+    ports:
+    - 8081:8081  
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin 
+      ME_CONFIG_MONGODB_ADMINPASSWORD: sachin
+      ME_CONFIG_MONGODB_URL: mongodb://admin:sachin@mongo:27017/
